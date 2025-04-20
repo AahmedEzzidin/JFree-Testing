@@ -22,14 +22,12 @@ public class YearTest {
         assertEquals(2025, year.getYear());
     }
 
-    //nourr
     @Test
     public void testYearIntCtor() {
         Year year = new Year(2000);
         assertEquals(2000, year.getYear());
     }
 
-    //nourr
     @Test
     public void testYearDateCtor() {
         Calendar calendar = Calendar.getInstance(TimeZone.getTimeZone("Africa/Cairo"));
@@ -40,7 +38,7 @@ public class YearTest {
         assertEquals(2000, year.getYear());
     }
 
-    //arwaaa&nourrrr
+
     @Test
     public void testYearTimezone()
     {
@@ -55,7 +53,6 @@ public class YearTest {
         assertEquals(2025,year.getYear());
     }
 
-    //arwaaa&nourrrr
     @Test
     public void testYearDateCalenderConstructor()
     {
@@ -68,7 +65,6 @@ public class YearTest {
         assertEquals(2025,year.getYear());
     }
 
-    //nourr
     @Test
     public void testGetYear()
     {
@@ -98,7 +94,6 @@ public class YearTest {
         assertEquals(expected.getTime(), year.getLastMillisecond());
     }
 
-    //nourr
     @Test
     public void testPeg() {
         Year year = new Year(2025);
@@ -115,7 +110,6 @@ public class YearTest {
         assertEquals(expected2.getTime(), year.getLastMillisecond());
     }
 
-    //arwaaa&nourrrr
     @Test
     public void testPreviousYear()
     {
@@ -133,7 +127,6 @@ public class YearTest {
 
     }
 
-    //arwaaa&nourrrr
     @Test
     public void testNextYear()
     {
@@ -150,7 +143,6 @@ public class YearTest {
 
     }
 
-    //nourr&arwaa
     @Test
     public void testGetSerialIndex() {
         Year year = new Year(2002);
@@ -159,7 +151,6 @@ public class YearTest {
         assertEquals(expected, SerialIndex);
     }
 
-    //nourr
     @Test
     public void testGetFirstMilliSecondCal(){
         Year year =new Year(2002);
@@ -169,8 +160,7 @@ public class YearTest {
         Date expected = calendar.getTime();
         assertEquals(expected.getTime(), year.getFirstMillisecond(calendar));
     }
-
-    //nourr
+    
     @Test
     public void testGetLastMilliSecondCal(){
         Year year =new Year(2004);
@@ -268,7 +258,7 @@ public class YearTest {
     }
 
 
-  /*  //Bug
+    //Bug
     @Test
     public void testGetMiddleMilliSecondLeap(){
         Year year =new Year(2000);
@@ -287,5 +277,5 @@ public class YearTest {
         calendar.set(Calendar.MILLISECOND,0);
         Date expected = calendar.getTime();
         assertEquals(expected.getTime(),year.getMiddleMillisecond());
-    }*/
+    }
 }
