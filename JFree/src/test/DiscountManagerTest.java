@@ -18,10 +18,7 @@ public class DiscountManagerTest {
         Mockery mockingContext = new Mockery();
         IDiscountCalculator mockedDependency = mockingContext.mock(IDiscountCalculator.class);
         mockingContext.checking(new Expectations() {
-            {
-                // make sure that none of the functions are called
-
-            }
+            { }
         });
         DiscountManager discountManager = new DiscountManager(isDiscountsSeason, mockedDependency);
         // Act
@@ -30,8 +27,6 @@ public class DiscountManagerTest {
         // Assert
         mockingContext.assertIsSatisfied();
         assertEquals(expectedPrice, actualPrice, 0.001);
-        // make sure that mocking Expectations Is Satisfied
-        // make sure that the actual value exactly equals the expected value
     }
 
     @Test
@@ -77,7 +72,6 @@ public class DiscountManagerTest {
         // Assert
         mockingContext.assertIsSatisfied();
         assertEquals(expectedPrice, actualPrice, 0.001);
-        // test missing cases
     }
     //Bug
     @Test
@@ -102,6 +96,5 @@ public class DiscountManagerTest {
         // Assert
         mockingContext.assertIsSatisfied();
         assertEquals(expectedPrice, actualPrice, 0.001);
-        // test missing cases
     }
 }
